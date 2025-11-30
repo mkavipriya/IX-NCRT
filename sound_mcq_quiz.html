@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>Sound - MCQ Quiz</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; }
+        h1 { color: #2c3e50; }
+        .question { margin-bottom: 15px; padding: 10px; background: #fff; border-radius: 5px; box-shadow: 0 0 5px #ccc; }
+        .options { margin-left: 20px; }
+        button { background-color: #3498db; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #2980b9; }
+        #result { margin-top: 20px; font-size: 18px; font-weight: bold; }
+        .explanation { color: #16a085; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Chapter: Sound - MCQ Quiz</h1>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. The speed of sound in air at 20°C is approximately:</p>
+            <div class="options">
+                <input type="radio" name="q1" value="a"> a) 300 m/s<br>
+                <input type="radio" name="q1" value="b"> b) 343 m/s<br>
+                <input type="radio" name="q1" value="c"> c) 400 m/s<br>
+                <input type="radio" name="q1" value="d"> d) 500 m/s<br>
+            </div>
+        </div>
+        <div class="question">
+            <p>2. Sound waves are:</p>
+            <div class="options">
+                <input type="radio" name="q2" value="a"> a) Transverse waves<br>
+                <input type="radio" name="q2" value="b"> b) Longitudinal waves<br>
+                <input type="radio" name="q2" value="c"> c) Electromagnetic waves<br>
+                <input type="radio" name="q2" value="d"> d) None of these<br>
+            </div>
+        </div>
+        <div class="question">
+            <p>3. Which physical quantity determines the pitch of a sound?</p>
+            <div class="options">
+                <input type="radio" name="q3" value="a"> a) Amplitude<br>
+                <input type="radio" name="q3" value="b"> b) Frequency<br>
+                <input type="radio" name="q3" value="c"> c) Speed<br>
+                <input type="radio" name="q3" value="d"> d) Wavelength<br>
+            </div>
+        </div>
+        <div class="question">
+            <p>4. The minimum distance required to hear an echo is:</p>
+            <div class="options">
+                <input type="radio" name="q4" value="a"> a) 10 m<br>
+                <input type="radio" name="q4" value="b"> b) 17.2 m<br>
+                <input type="radio" name="q4" value="c"> c) 20 m<br>
+                <input type="radio" name="q4" value="d"> d) 25 m<br>
+            </div>
+        </div>
+        <div class="question">
+            <p>5. Which device uses the principle of reflection of sound waves under water?</p>
+            <div class="options">
+                <input type="radio" name="q5" value="a"> a) Radar<br>
+                <input type="radio" name="q5" value="b"> b) SONAR<br>
+                <input type="radio" name="q5" value="c"> c) Telescope<br>
+                <input type="radio" name="q5" value="d"> d) Periscope<br>
+            </div>
+        </div>
+        <div class="question">
+            <p>6. The unit of frequency is:</p>
+            <div class="options">
+                <input type="radio" name="q6" value="a"> a) Hertz<br>
+                <input type="radio" name="q6" value="b"> b) Joule<br>
+                <input type="radio" name="q6" value="c"> c) Newton<br>
+                <input type="radio" name="q6" value="d"> d) Pascal<br>
+            </div>
+        </div>
+        <div class="question">
+            <p>7. Which of the following affects the loudness of sound?</p>
+            <div class="options">
+                <input type="radio" name="q7" value="a"> a) Frequency<br>
+                <input type="radio" name="q7" value="b"> b) Amplitude<br>
+                <input type="radio" name="q7" value="c"> c) Wavelength<br>
+                <input type="radio" name="q7" value="d"> d) Speed<br>
+            </div>
+        </div>
+        <div class="question">
+            <p>8. Sound cannot travel through:</p>
+            <div class="options">
+                <input type="radio" name="q8" value="a"> a) Solids<br>
+                <input type="radio" name="q8" value="b"> b) Liquids<br>
+                <input type="radio" name="q8" value="c"> c) Gases<br>
+                <input type="radio" name="q8" value="d"> d) Vacuum<br>
+            </div>
+        </div>
+        <div class="question">
+            <p>9. The speed of sound is maximum in:</p>
+            <div class="options">
+                <input type="radio" name="q9" value="a"> a) Air<br>
+                <input type="radio" name="q9" value="b"> b) Water<br>
+                <input type="radio" name="q9" value="c"> c) Steel<br>
+                <input type="radio" name="q9" value="d"> d) Vacuum<br>
+            </div>
+        </div>
+        <div class="question">
+            <p>10. Which of these is the correct relation for speed of sound?</p>
+            <div class="options">
+                <input type="radio" name="q10" value="a"> a) v = λ × f<br>
+                <input type="radio" name="q10" value="b"> b) v = f / λ<br>
+                <input type="radio" name="q10" value="c"> c) v = λ / f<br>
+                <input type="radio" name="q10" value="d"> d) v = f² × λ<br>
+            </div>
+        </div>
+        <br>
+        <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function checkAnswers() {
+            var answers = ['b','b','b','b','b','a','b','d','c','a'];
+            var explanations = [
+                'Speed of sound in air at 20°C ≈ 343 m/s.',
+                'Sound waves are longitudinal because particles oscillate along wave direction.',
+                'Pitch depends on frequency: higher frequency → higher pitch.',
+                'Echo requires minimum 17.2 m for sound to return in 0.1s.',
+                'SONAR uses reflection of sound waves under water.',
+                'Frequency is measured in Hertz (Hz).',
+                'Loudness depends on amplitude of vibration.',
+                'Sound cannot travel through vacuum as it needs a medium.',
+                'Speed of sound is maximum in solids like steel.',
+                'Speed of sound v = wavelength × frequency.'
+            ];
+            var score = 0;
+            var output = '';
+            for (var i = 1; i <= 10; i++) {
+                var q = document.querySelector('input[name="q'+i+'"]:checked');
+                if (q && q.value === answers[i-1]) {
+                    score++;
+                    output += '<p>Q'+i+': Correct! ' + explanations[i-1] + '</p>';
+                } else {
+                    output += '<p>Q'+i+': Wrong. ' + explanations[i-1] + '</p>';
+                }
+            }
+            document.getElementById('result').innerHTML = 'Your Score: ' + score + '/10' + output;
+        }
+    </script>
+</body>
+</html>
